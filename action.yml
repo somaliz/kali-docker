@@ -9,3 +9,12 @@ steps:
       password: ${{ secrets.DOCKER_PASSWORD }}
       repository: somaliz/kali-linux-full
       tags: latest
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master

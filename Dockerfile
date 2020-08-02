@@ -3,7 +3,7 @@ FROM kalilinux/kali-rolling
 LABEL maintainer="Somaliz"
 
 RUN apt-get -y update && apt-get -y upgrade && \
-   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+   DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y \
    kali-linux-large \
    pciutils \
    bash-completion && \
